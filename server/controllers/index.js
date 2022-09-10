@@ -4,7 +4,8 @@ const serverError = require('./errorHandle/serverError');
 const {homePage, loginPage, signupPage, profilePage} = require('./handlePages');
 
 const {handleSignup} = require('./handleSignup');
+const {handleLogin} = require('./handleLogin');
 
 module.exports = { 
-    serverError, notFoundError , homePage, loginPage, signupPage, profilePage,handleSignup
+    serverError, notFoundError , homePage, loginPage, signupPage, profilePage,handleSignup,handleLogin
 };

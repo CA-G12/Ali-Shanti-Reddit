@@ -6,7 +6,6 @@ const router = express.Router();
 router.use(notFoundError);
 router.use(serverError);
 
-const { handleSignup, handleLogin } = require('../controllers/index');
 const { handleSignup , handleLogin , handleLogout} = require('../controllers/index');
 
 router.post('/signup', handleSignup);

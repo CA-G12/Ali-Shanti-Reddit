@@ -1,4 +1,10 @@
 const notFoundError = require('./errorHandle/notFoundError');
 const serverError = require('./errorHandle/serverError');
 
-module.exports = { serverError, notFoundError };
+const {homePage, loginPage, signupPage, profilePage} = require('./handlePages');
+
+const {handleSignup} = require('./handleSignup');
+
+module.exports = { 
+    serverError, notFoundError , homePage, loginPage, signupPage, profilePage,handleSignup
+};

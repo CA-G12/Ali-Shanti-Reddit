@@ -1,23 +1,19 @@
-require('env2')('.env');
 const { Pool } = require('pg');
+require('env2')('.env');
 
-const { NODE_ENV, TEST_DB_URL, DEV_DB_URL, DATABASE_URL } = process.env;
+let DB_URL = '';
 
-let dbURL = '';
+if (process.env.NODE_ENV === 'test') {
+  DB_URL = process.env.DB_URL_TEST;
+} else if (process.env.NODE_ENV === 'dev') {
+  DB_URL = process.env.DB_URL;
+} else if (process.env.NODE_ENV === 'production') {
+  DB_URL = process.env.DATABASE;
+} else throw new Error('NO DB_URL');
 
-if (NODE_ENV === 'test') {
-    dbURL = TEST_DB_URL;
-} else if (NODE_ENV === 'dev') {
-    dbURL = DEV_DB_URL;
-} else if (NODE_ENV === 'prod') {
-    dbURL = DATABASE_URL;
-} else {
-    throw new Error('THERE IS NO DB URL');
-}
+const connection = {
+  connectionString: DB_URL,
+  ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
+};
 
-const connection = new Pool({
-    connectionString: dbURL,
-    ssl: false,
-});
-
-module.exports = connection;
+module.exports = new Pool(connection);

@@ -1,5 +1,5 @@
-const connections = require('../config/connections');
+const connections = require('../config/connection');
 
-const checkEmail = (email) => connections.query('SELECT email FROM users WHERE email = $1', [email]);
+const checkEmail = (email) => connections.query('SELECT email FROM Users WHERE email = $1', [email]);
 
 module.exports = { checkEmail };

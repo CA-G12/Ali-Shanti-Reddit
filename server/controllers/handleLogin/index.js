@@ -1,17 +1,17 @@
 const { hash, compare } = require('bcryptjs');
-const { loginSchema, customizedError , signPromise} = require('../utils');
-const { checkEmail, getPassword } = require('../database/queries');
+const { login, GenerateError , signInPromise} = require('../../utils');
+const { checkEmail, getPassword } = require('../../database/queries');
 
 const handleLogin = (req, res, next) => {
   const { email, password } = req.body;
-  loginSchema
+  login
     .validateAsync(req.body)
     .then((data) => checkEmail(data.email))
     .then((data) => {
       if (data.rowCount === 1) {
         return getPassword(data.rows[0].email);
       } else {
-        throw customizedError("Email and password don't  match ");
+        throw GenerateError("Email and password don't  match ");
       }
     })
     .then((data) => {
@@ -19,9 +19,9 @@ const handleLogin = (req, res, next) => {
     })
     .then((isMatch) => {
       if (isMatch) {
-        return signPromise(email)
+        return signInPromise(email)
       } else {
-        throw customizedError("Email and password don't  match ");
+        throw GenerateError("Email and password don't  match ");
       }
     })
     .then((token)=>{
@@ -32,7 +32,7 @@ const handleLogin = (req, res, next) => {
     })
     .catch((err)=>{
         if(err.name === 'ValidationError'){
-            next(customizedError('Validation failed', 400));
+            next(GenerateError('Validation failed', 400));
         }else{
             next(err)
         }

@@ -8,7 +8,6 @@
     "dev": "cross-env NODE_ENV=development nodemon server",
     "test": "cross-env NODE_ENV=test jest"
   },
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CA-G12/Ali-Shanti-Reddit.git"
@@ -20,6 +19,7 @@
   },
   "homepage": "https://github.com/CA-G12/Ali-Shanti-Reddit#readme",
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "eslint": "^8.23.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
@@ -29,8 +29,8 @@
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "compression": "^1.7.4",
     "cookie-parser": "^1.4.6",
-    "cross-env": "^7.0.3",
     "env2": "^2.2.2",
     "express": "^4.18.1",
     "joi": "^17.6.0",

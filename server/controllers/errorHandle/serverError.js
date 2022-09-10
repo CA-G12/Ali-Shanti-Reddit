@@ -1,7 +1,7 @@
 const { join } = require('path');
 
-const serverError = (req, res) => {
-    const file = join(__dirname, '..', '..', '..', 'public', 'html', '500.html');
+const serverError = (err,req,res,next)=>{
+    const file = join(__dirname, '..', '..', '..', 'public','assets' ,'html', '500.html');
     res.status('500').sendFile(file);
 };
 

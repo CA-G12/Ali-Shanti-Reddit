@@ -1,5 +1,6 @@
-const {signup } = require('./validation/signup');
-const { manyErrors } = require('./GenerateError');
-const { signInPromise } = require('./signPromise');
+const {signup} = require('./validation/singup');
+const { GenerateError } = require('./GenerateError');
+const { signInPromise } = require('./signInPromise');
+const {login} = require('./validation/login')
 
-module.exports = {signup , manyErrors, signInPromise};
+module.exports = {signup, GenerateError, signInPromise,login};

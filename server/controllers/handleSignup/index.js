@@ -20,8 +20,7 @@ const handleSignup = (req, res, next) => {
       return signPromise(email);
     })
     .then((token) => {
-      res
-          .cookie('access_token', token, {
+      res.cookie('access_token', token, {
             maxAge: 2592000000,
             httpOnly: true,
           })

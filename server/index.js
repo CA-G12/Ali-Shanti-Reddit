@@ -1,7 +1,5 @@
-const app = require('./app');
+const app = require("./app");
 
-const port = app.get('port');
-
-app.listen(port, () => {
-  console.log('server is running on http://localhost:4000');
+app.listen(app.get("port"), () => {
+  console.log(`SERVER IS RUNNING IN http://localhost:${app.get("port")}`);
 });

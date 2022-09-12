@@ -1,0 +1,276 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #dae0e6;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  background-color: #fff;
+  padding: 0 40px;
+  align-items: center;
+}
+
+nav div {
+  width: 45%;
+}
+
+.logo img {
+  width: 100px;
+}
+
+.logoDiv {
+  margin: 0 20px;
+  padding: 5px;
+}
+
+.search {
+  width: 630px;
+  height: 25px;
+  margin: 8px;
+  background-color: #f6f7f8;
+  border-radius: 4px;
+  border: 1px solid #e3e3e3;
+  padding-left: 20px;
+}
+
+.search:hover {
+  border: 1px solid #2c79d3;
+  background-color: white;
+}
+
+.line-item {
+  display: flex;
+  gap: 24px;
+}
+.item-description {
+  display: flex;
+  padding-top: 6px;
+  gap: 8px;
+  color: #7b7b7b;
+}
+.comment1 {
+  margin-top: 12px;
+  color: #3d3d3d;
+  border: 1px solid #e3e3e3;
+  box-shadow: 0 4px 4px 0 #f4f6f8;
+  border-radius: 6px;
+  padding: 16px;
+  font-size: 1rem;
+}
+
+.form {
+  margin: 0px 75px;
+  position: relative;
+}
+
+.form i {
+  position: absolute;
+  top: 14px;
+  left: 15px;
+  color: #878c93;
+}
+
+.btn {
+  margin-top: 5px;
+  margin-left: 40px;
+}
+
+.btn a {
+  text-decoration: none;
+}
+
+.login,
+.signUp,
+.logout {
+  text-align: center;
+  border: #2c79d3 solid 1px;
+  border-radius: 25px;
+  font-weight: bold;
+  margin-top: 3px;
+}
+
+.login {
+  color: #2c79d3;
+  background-color: white;
+  padding: 5px 40px;
+  margin-right: 15px;
+}
+
+.signUp {
+  color: white;
+  background-color: #2c79d3;
+  padding: 5px 35px;
+}
+
+.logout {
+  color: #f44312;
+  background-color: white;
+  padding: 5px 40px;
+  margin-right: 15px;
+  border-color: #f44312;
+}
+
+.login a {
+  color: #2c79d3;
+}
+
+.signUp a {
+  color: white;
+}
+
+.fa-user {
+  margin-left: 15px;
+  margin-top: 6px;
+}
+
+#buttons {
+  display: flex;
+  width: 300px;
+  margin: 5px;
+  justify-content: space-between;
+}
+
+.fa-plus {
+  color: black;
+  margin: 10px;
+  font-size: 10px;
+}
+
+.userName {
+  display: inline-block;
+  margin: 9px;
+}
+
+.container {
+  width: 73%;
+  height: 400px;
+  margin: auto;
+  height: auto;
+  max-width: 1020px;
+}
+
+.trending {
+  display: flex;
+}
+
+.trending div {
+  position: relative;
+  width: 25%;
+}
+
+.trend img {
+  width: 238px;
+  height: 178px;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  opacity: 0.8;
+}
+
+.trend .content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: rgb(0, 0, 0);
+}
+
+.content .title {
+  font-size: 18px;
+}
+
+.content .text {
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 20px;
+  max-height: 40px;
+}
+
+.popularPosts {
+  display: flex;
+  width: 67%;
+  justify-content: space-around;
+  padding: 10px 12px;
+  margin-bottom: 16px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.hot,
+.everywhere {
+  border: none;
+  background-color: #f6f7f8;
+  border-radius: 9999px;
+  color: #2c79d3;
+  font-weight: bold;
+}
+
+.news,
+.top {
+  color: #878a8c;
+  font-weight: bold;
+}
+
+.posts {
+  width: 67%;
+  background-color: white;
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.posts .votes {
+  background-color: #f7f9fa;
+  width: 50px;
+  display: inline-block;
+}
+
+.votes i {
+  padding: 8px;
+}
+
+.votes span {
+  display: inline-block;
+  margin-left: 10.5px;
+}
+
+.comment {
+  margin-left: 15px;
+  padding: 20px 0;
+}
+
+.comment a {
+  color: black;
+}
+
+.userName {
+  display: inline-block;
+  width: auto;
+  height: 25px;
+  font-size: 20px;
+}
+
+.comment .date {
+  display: inline-block;
+  margin-left: 80px;
+}
+
+.comment .icons {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.comment .icons i {
+  margin: 0 15px;
+}
+
+.comment .content {
+  margin-bottom: 30px;
+}
+
+.allContent {
+  margin: 15px 0;
+}

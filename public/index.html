@@ -1,16 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/index.css">
-    <title>Reddit</title>
-</head>
-<body>
-    <h1> Hello Word!</h1>
 
-    <script src="assets/js/fetch.js"></script>
-    <script src="assets/js/main.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="favoico.ico/favoico.png" type="image/x-icon" />
+  <title>Reddit</title>
+</head>
+
+<body>
+  <div class="mainPage">
+    <div class="nav">
+      <div class="logo">
+        <img src="images/Reddit-Logo.png" alt="logo">
+      </div>
+      <div class="form">
+        <i class="fa fa-search"></i>
+        <input type="text" class="search" placeholder="  Search Reddit">
+      </div>
+      <div class="btn" id="buttons">
+        <button class="login "><a href="/login">Log In</a></button>
+        <button class="signUp"><a href="/signUp">Sign Up</a></button>
+        <i class="fa fa-user" style="font-size: 22px " id="search-icon"></i>
+      </div>
+    </div>
+    <div class="container">
+      <h4>Trending today</h4>
+      <div class="trending">
+        <div class="trend">
+          <img src="https://inc42.com/wp-content/uploads/2022/09/tech-stock-ftr-img.png">
+        </div>
+        <div class="trend">
+          <img
+            src="https://external-preview.redd.it/XSg9Nmfrp7IhhtfQ7OJwA1sPYiUuYanUGRtvFyzfr2s.jpg?auto=webp&s=332428e29dd1c865588d0639a954217386c9871e"
+            alt="">
+        </div>
+        <div class="trend">
+          <img src="https://preview.redd.it/kxvvwja2grn81.jpg?auto=webp&s=7f8ee3bc1c3900e216eb874f482565c3d2e0c3fa"
+            alt="">
+        </div>
+        <div class="trend">
+          <img
+            src="https://external-preview.redd.it/pyFsmtursCgp7yzqqTArJDVLt3CK5jY0TITDhW6g3FI.jpg?auto=webp&s=653e9d4db6639c09fa1ca9fd21c9cc973f26912f"
+            alt="">
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="popularPosts">
+        <div class="hot">
+          <i class="fa fa-fire" style="font: size 20px;"></i>
+          <span>Hot</span>
+        </div>
+        <div class="everywhere">
+          <select class="everywhere">
+            <option>Every Where</option>
+            <option>Serbia</option>
+            <option>Spain</option>
+            <option>Turkey</option>
+            <option>United Kingdom</option>
+            <option>palestine</option>
+          </select>
+        </div>
+        <div class="news">
+          <span>news</span>
+        </div>
+        <div class="top">
+          <span>top</span>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="allContent"></div>
+    </div>
+  </div>
+  <script src="js/index.js"></script>
 </body>
+
 </html>
